@@ -1,0 +1,404 @@
+/* 画像 */
+/*
+  ・画像は、<div class="以下を指定"><div><img></div></div>という構造にする。
+  ・.large-frame : 最大幅800px。幅に対し、4:3のアスペクト比で表示
+  ・.middle-frame : 最大幅600px。幅に対し、4:3のアスペクト比で表示
+  ・.small-frame : 最大幅400px。幅に対し、4:3のアスペクト比で表示
+  ・画像の全ての領域を枠内に入れたい場合、<img class="contain">とする。
+ */
+.large-frame{
+  width: 100%;
+  max-width: 800px;
+}
+.large-frame > div{
+  width: 100%;
+  padding-top: calc(3 / 4 * 100%);
+  position: relative;
+  overflow: hidden;
+}
+.middle-frame{
+  width: 100%;
+  max-width: 600px;
+}
+.middle-frame > div{
+  width: 100%;
+  padding-top: calc(3 / 4 * 100%);
+  position: relative;
+  overflow: hidden;
+}
+.small-frame{
+  width: 100%;
+  max-width: 400px;
+}
+.small-frame > div{
+  width: 100%;
+  padding-top: calc(3 / 4 * 100%);
+  position: relative;
+  overflow: hidden;
+}
+img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img.contain{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* 重要な部分の文字色 */
+/*
+  ・太字+赤          : class="font-color-red"とする
+  ・下線(ハイライト) : class="highlight"とする
+*/
+.font-color-red{
+  color: red;
+  font-weight: bolder;
+}
+.highlight{
+  background-color: #fdb;
+}
+/* my_work.htmlのスタイル */
+.go-to-index{
+  position: fixed;
+  width: 10%;
+  bottom: 20vh;
+  right: 0;
+  z-index: 1;
+}
+.go-to-index a{
+  display: flex;
+  /* ------重要-------- */
+  align-items: flex-start;/* 三角の疑似要素(.go-to-index a::before)を、line-heightの高さの中で上揃え*/
+  font-size: 16px;/* 三角と同じサイズ */
+  line-height: 28px;/* 三角の縦中央と一致するよう計算。line-heightを指定すると、文字は勝手に縦中央になるので、疑似要素の縦中央のみを考えればよい。 */
+  /* ------------------ */
+  justify-content: center;
+  text-align: center;
+  background-color: #e6b422;
+  width: 100%;
+  max-width: 128px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-decoration: none;
+}
+/* 三角 */
+.go-to-index a::before{
+  content: '';
+  /* ------重要-------- */
+  /* 以下により疑似要素は縦横16pxとなる。borderのサイズを変更したら、.go-to-index aも変更*/
+  border: 8px solid transparent;
+  border-bottom: 8px solid #555;
+  /* ------------------ */
+  margin-right: 4px;
+}
+#index a{
+  text-decoration: none;
+}
+#my-work-overview h2{
+  margin: 0;
+  font-size: 1.17em;
+}
+/* 一番大きなh1のスタイル */
+#index > h1, #my-work-overview > h1, #all-functions > h1, #implementation-details > h1, #background > h1, #er-diagram > h1, #tech-stack > h1, #next-steps > h1{
+  display: inline-block;
+}
+#index > h1::after, #my-work-overview > h1::after, #all-functions > h1::after, #implementation-details > h1::after, #background > h1::after, #er-diagram > h1::after, #tech-stack > h1::after, #next-steps > h1::after{
+	content: '';
+	display: block;
+	width: 85px;
+	height: 5px;
+	background: #000;
+	margin-top: 24px;
+}
+#background h2{
+  font-size: 1.17em;
+}
+#all-functions-index a{
+  text-decoration: none;
+}
+/* id="all-functions-index"内で一番大きなh1のスタイル */
+#all-functions-index > h1, #main-functions > h1, #top-page > h1, #logout-and-delete-account > h1{
+  border-bottom: 2px solid #000;
+  position: relative;
+  padding: 8px 16px;
+  display: inline-block;
+}
+#all-functions-index > h1::before, #main-functions > h1::before, #top-page > h1::before, #logout-and-delete-account > h1::before{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #333;
+}
+#add-post{
+  margin-bottom: 64px;
+}
+/* id="all-functions-index"内、各セクションのh1のスタイル */
+#add-post > h1, #category > h1, #delete > h1, #new-registration > h1, #login > h1{
+  display: inline-block;
+  font-size: 1.17em;
+  border-bottom: 1px solid #000;
+  border-left: 10px solid #000;
+  padding: 8px;
+}
+#add-post .steps{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-rows: auto auto auto auto;
+  gap: 2rem;
+  grid-template-areas:
+  "step-1       step-1"
+  "step-1-img-1 step-1-img-2"
+  "step-2       step-3"
+  "step-2-img   step-3-img";
+  justify-content: space-around;
+}
+#add-post .steps > .step-1{
+  grid-area: step-1;
+  margin: 0;
+}
+#add-post .steps > .step1-img{
+  grid-area: step-1-img;
+}
+#add-post .steps > .step-2{
+  grid-area: step-2;
+  margin: 0;
+}
+#add-post .steps > .step-2-img{
+  grid-area: step-2-img;
+}
+#add-post .steps > .step-3{
+  grid-area: step-3;
+  margin: 0;
+}
+#add-post .steps > .step-3-img{
+  grid-area: step-3-img;
+}
+#category{
+  margin-bottom: 64px;
+}
+#category .steps{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-rows: auto auto auto auto;
+  gap: 2rem;
+  grid-template-areas:
+  "step-1       step-1"
+  "step-1-img-1 step-1-img-2"
+  "step-2       step-2"
+  "step-2-img-1 step-2-img-2"
+  "step-3       step-3"
+  "step-3-img-1 step-3-img-2";
+  justify-content: space-around;
+}
+#category .steps > .step-1{
+  grid-area: step-1;
+  margin: 0;
+}
+#category .steps > .step-1-img-1{
+  grid-area: step-1-img-1;
+}
+#category .steps > .step-1-img-2{
+  grid-area: step-1-img-2;
+}
+#category .steps > .step-2{
+  grid-area: step-2;
+  margin: 0;
+}
+#category .steps > .step-2-img-1{
+  grid-area: step-2-img-1;
+  margin: 0;
+}
+#category .steps > .step-2-img-2{
+  grid-area: step-2-img-2;
+  margin: 0;
+}
+#category .steps > .step-3{
+  grid-area: step-3;
+  margin: 0;
+}
+#category .steps > .step-3-img-1{
+  grid-area: step-3-img-1;
+  margin: 0;
+}
+#category .steps > .step-3-img-2{
+  grid-area: step-3-img-2;
+  margin: 0;
+}
+#delete{
+  margin-bottom: 64px;
+}
+#delete .steps{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas:
+  "step-1     step-1"
+  "step-1-img .";
+  justify-content: space-around;
+}
+#delete .steps > .step-1{
+  grid-area: step-1;
+  margin: 0;
+}
+#delete .steps > .step-1-img{
+  grid-area: step-1-img;
+}
+.top-page-img{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas:
+  "p   p"
+  "div .";
+  justify-content: space-around;
+  margin-bottom: 64px;
+}
+.top-page-img > p{
+  grid-area: p;
+  margin: 0;
+}
+.top-page-img > div{
+  grid-area: div;
+}
+#new-registration{
+  margin-bottom: 64px;
+}
+#new-registration .steps{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas:
+  "step-1 step-2"
+  "step-1-img step-2-img"
+  "step-3 step-4"
+  "step-3-img step-4-img"
+  "step-5 ."
+  "step-5-img .";
+  justify-content: space-around;
+}
+#new-registration .steps > .step-1{
+  grid-area: step-1;
+  margin: 0;
+}
+#new-registration .steps > .step-1-img{
+  grid-area: step-1-img;
+}
+#new-registration .steps > .step-2{
+  grid-area: step-2;
+  margin: 0;
+}
+#new-registration .steps > .step-2-img{
+  grid-area: step-2-img;
+}
+#new-registration .steps > .step-3{
+  grid-area: step-3;
+  margin: 0;
+}
+#new-registration .steps > .step-3-img{
+  grid-area: step-3-img;
+}
+#new-registration .steps > .step-4{
+  grid-area: step-4;
+  margin: 0;
+}
+#new-registration .steps > .step-4-img{
+  grid-area: step-4-img;
+}
+#new-registration .steps > .step-5{
+  grid-area: step-5;
+  margin: 0;
+}
+#new-registration .steps > .step-5-img{
+  grid-area: step-5-img;
+}
+#login{
+  margin-bottom: 64px;
+}
+.logout-and-delete-account-img{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas:
+  "ul   ul"
+  "div  .";
+  justify-content: space-around;
+  margin-bottom: 64px;
+}
+.logout-and-delete-account-img > ul{
+  grid-area: ul;
+}
+.logout-and-delete-account-img > div{
+  grid-area: div;
+}
+#implementation-details ul{
+  padding: 0;
+}
+#implementation-details li{
+  list-style-type: none;
+  padding-left: calc(1rem + 4px);
+  position: relative;
+}
+#implementation-details li.level-1::before{
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: gold;
+}
+#implementation-details li:not(.level-1)::before{
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: black;
+}
+.validation-lists{
+  border-collapse: collapse;
+  margin: 8px 0 8px calc(1rem + 4px);
+}
+.validation-lists th{
+  background-color: oldlace;
+}
+.validation-lists th, .validation-lists td{
+  border:1px #333 solid;
+  padding: 4px 8px;
+}
+#tech-stack table{
+  border-collapse: collapse;
+  margin: 8px 0 8px 40px;
+}
+#tech-stack table th{
+  background-color: oldlace;
+}
+#tech-stack table th, #tech-stack table td{
+  border:1px #333 solid;
+  padding: 4px 8px;
+}
+/* @media (min-width: 769px) and (max-width: 1024px){
+
+}
+@media (min-width: 481px) and (max-width: 768px){
+
+}
+@media (max-width: 480px){
+
+} */
+@media (any-hover: hover){
+  .go-to-index a:hover{
+    filter: brightness(0.7) contrast(1.6);
+  }
+}
