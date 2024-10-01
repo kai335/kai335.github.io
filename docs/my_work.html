@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/share_layout.css">
+    <link rel="stylesheet" href="../css/my_work.css">
+    <title>portfolio</title>
+  </head>
+  <body id="top">
+    <header>
+      <nav class="global-nav">
+        <ul>
+          <li><a href="index.html">トップページ</a></li>
+          <li><a href="my_work.html">制作物</a></li>
+          <li><a href="skill_set.html">スキルセット</a></li>
+        </ul>
+      </nav>
+      <div class="go-to-index"><a href="#top">先頭へ</a></div>
+    </header>
+
+    <main>
+      <div class="all-contents">
+        <h1>制作物</h1>
+        <p>webアプリ<a href="https://github.com/kai335/Moment">『Moment』</a>を制作しました（未デプロイ）。</p>
+
+        <nav id="index">
+          <h1>目次</h1>
+          <ul>
+            <li><a href="#my-work-overview">『Moment』紹介</a></li>
+            <li><a href="#background">開発背景</a></li>
+            <li><a href="#all-functions">機能一覧（ユーザー目線）</a></li>
+            <li><a href="#implementation-details">実装詳細（開発者目線）</a></li>
+            <li><a href="#er-diagram">ER図</a></li>
+            <li><a href="#tech-stack">技術スタック</a></li>
+            <li><a href="#next-steps">今後の課題と追加したい機能</a></li>
+          </ul>
+        </nav>
+  
+        <section id="my-work-overview">
+          <h1>『Moment』紹介</h1>
+          <p>あなたの世界の「瞬間」を切り取って、コレクションを作りましょう！</br>空、日常、好きな色や雰囲気…お気に入りを集めてみませんか？</p>
+          <h2>【PCでの表示】</h2>
+          <div class="large-frame"><div><img src="./images/screenshot-180812.jpg" class="contain"></div></div>
+          <h2>【スマートフォンでの表示】</h2>
+          <div class="middle-frame"><div><img src="./images/screenshot-232023.png" class="contain"></div></div>
+          <ul>
+            <li>あなたのコレクションを楽しみましょう。カテゴリに分けて自由に鑑賞。</li>
+            <li>リアルやSNSで疲れを感じる人に。「自分が生きている目の前の世界」を見つめるきっかけに。</li>
+            <li>「自分だけの写真集を作る」という楽しみ方も。</li>
+          </ul>
+        </section>
+
+        <section id="background">
+          <h1>開発背景</h1>
+          <p>空白期間を過ごしている時に、写真を眺めたことがメンタルヘルスの改善に役立ちました。その効果を提供する場として、『Moment』を制作しました。</p>
+          <h2>写真を眺めてメンタルヘルスの改善？</h2>
+          <p>疲れた時や辛い時は気持ちの切り替えが難しい時がありますが、写真が持つ色や雰囲気に浸ったり、美しいと感じることで、一旦思考をそこから離したり、感情に変化をもたらします。つまり、「写真を見て楽しむこと」です。その場を提供するために、『Moment』では、世界観にこだわりました。</p>
+          <h2>『Moment』の世界観</h2>
+          <p>今はSNSの時代で、写真映えを気にしたり承認欲求が生まれがちです。しかし、このアプリでは、自己満足を追求しています。写真を撮ることは「瞬間を切り取ること」。写真の撮り方や、撮るものに正解はありません。自分の好きな色や雰囲気など、自分の心がハッとしたものを感じるままに切り取ります。それを「コレクション」とすることで、「自分の為に集めて楽しむ」ものとしています。子どもの頃、お菓子の缶に宝物を集めたことはありませんか？そのような楽しみ方をイメージしました。『Moment』を通して、写真を楽しみ、自己満足を追求し、前向きな変化をもたらすことが目的です。</p>
+          <h2>開発に至った経験</h2>
+          <p>空白期間が長くなるほど自信を無くし、なかなか社会復帰の一歩が踏み出せませんでした。ふとSNSを見ると、他人との比較、炎上商法、世の中の人々の本音があふれています。理不尽な言葉でも、共感者が多いとそれが正しいように感じてしまい、携帯を触っていなくても常に自分が「そういう世の中」に生きている気持ちになりました。ある時、ふと写真を見返したときに、これはいい写真だなと思うことがありました。辛い時は今ある状況が自分の全てで、色のない世界に生きていると感じます。しかし「その状態の自分が気づけないだけで、心がハッとするものや色があるんだ。」と気づかされました。この美しい瞬間に自分は生きていたんだと思うと、案外悪くないなと思えました。一時的な、些細な感情の変化ですが、この積み重ねが前向きな気持ちに繋がりました。社会復帰への一歩を踏み出す心の変化の1つに、これがあると感じます。そして写真を撮って見返す行為は、自然と「自分が生きている目の前の世界」を見つめることになり、SNSが生み出す生きづらい世の中と距離をおくことに繋がりました。</p>
+        </section>
+  
+        <section id="all-functions">
+          <h1>機能一覧（ユーザー目線）</h1>
+          <nav id="all-functions-index">
+            <h1>目次</h1>
+            <ul>
+              <li>
+                <a href="#main-functions">メイン機能</a>
+                <ul class="main-functions-index">
+                  <li><a href="#add-post">追加</a></li>
+                  <li><a href="#category">カテゴリ</a></li>
+                  <li><a href="#delete">削除</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#top-page">トップページの機能</a>
+                <ul>
+                  <li><a href="#new-registration">新規登録</a></li>
+                  <li><a href="#login">ログイン</a></li>
+                </ul>
+              </li>
+              <li><a href="#logout-and-delete-account">ログアウト / アカウント削除</a></li>
+            </ul>
+          </nav>
+  
+          <section id="main-functions">
+            <h1>メイン機能</h1>
+            <section id="add-post">
+              <h1>追加</h1>
+              <div class="steps">
+                <p class="step-1">①ここで投稿を行います。1度に投稿できる画像は1～4枚まで。画像を選択するとプレビューされます。</p>
+                <div class="small-frame step-1-img-1"><div><img src="./images/screenshot-130417-1.png" class="contain"></div></div>
+                <div class="small-frame step-1-img-2"><div><img src="./images/screenshot-115112.jpg"></div></div>
+                <p class="step-2">②ドラッグ＆ドロップで好きな順に並び替え、投稿。</p>
+                <div class="small-frame step-2-img"><div><img src="./images/screenshot-131638-1.jpg"></div></div>
+                <p class="step-3">③投稿できました。</p>
+                <div class="small-frame step-3-img"><div><img src="./images/screenshot-154542-1.jpg"></div></div>
+              </div>
+            </section>
+  
+            <section id="category">
+              <h1>カテゴリ</h1>
+              <div class="steps">
+                <p class="step-1">①ここで投稿をカテゴリに分けます。まずは、カテゴリに分けたい投稿を選択します。</p>
+                <div class="small-frame step-1-img-1"><div><img src="./images/screenshot-102317-1.png" class="contain"></div></div>
+                <div class="small-frame step-1-img-2"><div><img src="./images/screenshot-203241.jpg" class="contain"></div></div>
+                <p class="step-2">②既存のカテゴリに追加するか、新しいカテゴリを作って追加します。新しく『スイーツ』というカテゴリを作成しました。</p>
+                <div class="small-frame step-2-img-1"><div><img src="./images/screenshot-163521.jpg"></div></div>
+                <div class="small-frame step-2-img-2"><div><img src="./images/screenshot-165025-1.jpg"></div></div>
+                <p class="step-3">③ここで不要なカテゴリを削除できます。</p>
+                <div class="small-frame step-3-img-1"><div><img src="./images/screenshot-102317-2.png" class="contain"></div></div>
+                <div class="small-frame step-3-img-2"><div><img src="./images/screenshot-164822.jpg"></div></div>
+              </div>
+            </section>
+            
+            <section id="delete">
+              <h1>削除</h1>
+              <div class="steps">
+              <p class="step-1">ここで投稿を削除したり、投稿をカテゴリから外すことができます。</p>
+              <div class="small-frame step-1-img"><div><img src="./images/screenshot-202937-1.png"></div></div>
+            </section>
+          </section>
+  
+          <section id="top-page">
+            <h1>トップページの機能</h1>
+            <div class="top-page-img">
+              <p>「ログイン」と「新規登録」ができます。</p>
+              <div class="small-frame"><div><img src="./images/screenshot-110931-1.png" class="contain"></div></div>
+            </div>
+  
+            <section id="new-registration">
+              <h1>新規登録</h1>
+              <div class="steps">
+                <p class="step-1">①メールアドレス、生年月日、ユーザー名、パスワードを入力します。利用規約に同意し、送信します。</p>
+                <div class="small-frame step-1-img"><div><img src="./images/screenshot-230133-1.png" class="contain"></div></div>
+    
+                <p class="step-2">②URL付きのメールが送信されます（1度だけなので、再送したい場合は「再送する」をクリック）。これで仮登録となります。ブラウザの戻るボタンで前の画面に戻れないようになっています。</p>
+                <div class="small-frame step-2-img"><div><img src="./images/screenshot-231539-1.png" class="contain"></div></div>
+    
+                <p class="step-3">③トップページに戻った場合、仮登録中ならログインと新規登録が利用できないようになっています。本登録を済ませましょう。</p>
+                <div class="small-frame step-3-img"><div><img src="./images/screenshot-101618-1.png" class="contain"></div></div>
+    
+                <p class="step-4">④メールのURLをクリックします。URLの有効期限は1時間で、過ぎると新規登録からやり直しになります。URLに問題がなければアクセスできます。有効期限を過ぎている、URLが改ざんされている、本登録済みである場合は無効です。</p>
+                <div class="small-frame step-4-img"><div><img src="./images/screenshot-105529-1.jpg" class="contain"></div></div>
+  
+                <p class="step-5">⑤ユーザー名とパスワードを入力して、本登録かつログインの完了です。ここではトップページのログインのように、他のユーザーの一致は無効です。</p>
+                <div class="small-frame step-5-img"><div><img src="./images/screenshot-110021.png" class="contain"></div></div>
+              </div>
+            </section>
+  
+            <section id="login">
+              <h1>ログイン</h1>
+              <ul>
+                <li>本登録済みのユーザーのみが利用できます。仮登録中の場合、本登録を促すメッセージと、メール再送信の案内を表示します。</li>
+              </ul>
+            </section>
+            
+          </section>
+  
+          <section id="logout-and-delete-account">
+            <h1>ログアウト / アカウント削除</h1>
+            <div class="logout-and-delete-account-img">
+              <ul>
+                <li>ログアウト : こちらをクリックします。トップページへ戻ります。</li>
+                <li>アカウント削除 : パスワードを入力し、確認画面にて確定します。</li>
+              </ul>
+              <div class="small-frame"><div><img src="./images/screenshot-233818-3.png" class="contain"></div></div>
+            </div>
+          </section>
+  
+        </section>
+  
+        <section id="implementation-details">
+          <h1>実装詳細（開発者目線）</h1>
+          <p><span class="highlight">※下線は工夫した所です。</span></p>
+          <ul>
+            <li class="level-1">POST送信での「フォーム再送信の確認」と二重送信を防止。ブラウザの戻る / 進むボタンで行き来可能</li>
+            <li class="level-1">入力値のバリデーション
+              <ul>
+                <li>JavaScript : ユーザー体験 & 不適切な値を弾きサーバーの負荷を減らす</li>
+                <li>PHP : 全てのチェック。JavaScriptが無効なユーザーにも対応</li>
+              </ul>
+              <table class="validation-lists">
+                <tbody>
+                  <tr>
+                    <th>メールアドレス</th>
+                    <td>未入力、型（xxx@xxx.xxx）、一意</td>
+                  </tr>
+                  <tr>
+                    <th rowspan="2">生年月日</th>
+                    <td>未入力、型（数8字）</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li>年 : 今年から100年以内の範囲か</li>
+                        <li>月 : 1月～12月か</li>
+                        <li>日 : 適切な月末か。閏年も考慮</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>ユーザー名</th>
+                    <td>未入力、型（英数記号、6字以上）、一意</td>
+                  </tr>
+                  <tr>
+                    <th>パスワード</th>
+                    <td>未入力、型（英数記号を必ず含む、8字以上）</td>
+                  </tr>
+                  <tr>
+                    <th>画像</th>
+                    <td>
+                      <ul>
+                        <li>枚数 : 1～4枚</li>
+                        <li>ファイルサイズ : 1枚1MB以下、0バイト以外</li>
+                        <li>アップロードに成功したか</li>
+                        <li>ファイルの種類 : jpg / png / gif（拡張子とMIMEタイプ）</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>カテゴリ名</th>
+                    <td>未入力、20字以下、一意</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="level-1">パスワードをBcryptでハッシュ化してDBに格納</li>
+            <li class="level-1">
+              ユーザーの投稿の表示
+              <ul>
+                <li>JavaScriptの非同期処理を使用</li>
+                <li><span class="highlight">同じカテゴリを選択した場合、最初の1回だけ実行。</span></li>
+                <li><span class="highlight">選択したカテゴリが全投稿を取得するまで、他のカテゴリは選択できない（瞬時に別のカテゴリを選択すると、投稿が前回のカテゴリのままになる問題を解決）。</span></li>
+              </ul>
+            </li>
+            <li class="level-1">
+              新規登録
+              <ul>
+                <li>複数ページある入力フォームの実装</li>
+                <li>利用規約に同意・送信前 : 自由に入力内容を修正できる。</li>
+                <li>
+                  利用規約に同意・送信後 : 仮登録とする。登録情報をDBに挿入し、URL付のメールを1度だけ送信。<span class="highlight">前のページへ戻れない。トップページからログインと新規登録が利用できない。</span>
+                  <ul>
+                    <li>ユーザーにとって仮登録 = 「まだ登録できていない状態」。ログインできたり、一意であるメールアドレスとユーザー名の重複チェックに引かかると混乱を招くので制限。登録情報を修正したい場合、本登録後にアプリ内の設定画面でしてもらう【作成中】</li>
+                  </ul>
+                </li>
+                <li>メール再送ボタンを設置</li>
+                <li><span class="font-color-red">（※1）</span>メール認証のURL</li>
+              </ul>
+            </li>
+            <li class="level-1">投稿追加
+              <ul>
+                <li><span class="highlight">1投稿につき画像は1～4枚まで。画像をドラッグ＆ドロップして好きな順で投稿できる</span></li>
+              </ul>
+            </li>
+            <li class="level-1">
+              ログイン
+              <ul>
+                <li>セッションにユーザー名を格納した状態のこと</li>
+              </ul>
+            </li>
+            <li class="level-1">
+              ログアウト
+              <ul>
+                <li>
+                  セッションを完全削除（セッションを保存したファイル削除、セッションクッキーの削除、メモリから削除）
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <section id="references">
+            <h1><span class="font-color-red">（※1）</span></h1>
+            <p>このアプリケーションは、以下のMITライセンスの下で提供されるコードを含んでいます。</p>
+            <p>
+              - 著作権表示 : 大垣　靖男</br>
+              - ソース : <a href="https://blog.ohgaki.net/url-with-timeout-using-hash-hmac">ハッシュ（HMAC）を使って有効期限付きURL/URIを作る方法</a></br>
+              - MIT License : <a href="https://opensource.org/license/mit">https://opensource.org/license/mit</a>
+            </p>
+          </section>
+        </section>
+  
+        <section id="er-diagram">
+          <h1>ER図</h1>
+          <div class="large-frame"><div><img src="./images/moment-er-diagram2.png" class="contain"></div></div>
+        </section>
+  
+        <section id="tech-stack">
+          <h1>技術スタック</h1>
+          <p>PHPはモジュール版です。</p>
+          <table>
+            <tbody>
+              <tr>
+                <th>フロントエンド</th>
+                <td>HTML / CSS / JavaScript</td>
+              </tr>
+              <tr>
+                <th>バックエンド</th>
+                <td>PHP : 8.2.22</td>
+              </tr>
+              <tr>
+                <th>データベース</th>
+                <td>MySQL : 8.0.36</td>
+              </tr>
+              <tr>
+                <th>メールサーバ</th>
+                <td>MailHog</td>
+              </tr>
+              <tr>
+                <th>アイコン</th>
+                <td>Google Fonts</td>
+              </tr>
+              <tr>
+                <th>バージョン管理システム</th>
+                <td>Git / GitHub</td>
+              </tr>
+              <tr>
+                <th>開発ツール</th>
+                <td>VSCode : 1.92.2</td>
+              </tr>
+              <tr>
+                <th>インフラ</th>
+                <td>Docker Desktop: 4.23.0</td>
+              </tr>
+              <tr>
+                <th>OS</th>
+                <td>WSL2 : 2.2.4.0</td>
+              </tr>
+              <tr>
+                <th>ブラウザ</th>
+                <td>Chrome</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+  
+        <section id="next-steps">
+          <h1>今後の課題と追加したい機能</h1>
+          <ul>
+            <li>PHPはFastCGI版とする</li>
+            <li>ユーザーが画像を投稿する時、自動でメタデータの削除と圧縮を行いたい</li>
+            <li>最近のスマートフォンの画像（HEICファイル）への対応</li>
+            <li>画像は非公開ディレクトリに保存し、DBにはパスを格納する方法にしたい。現在、DBにはデータそのものを格納し、データURLとして画像を表示している。</li>
+            <li>画像を表示する非同期処理のパフォーマンスを見直す</li>
+            <li>画像を表示する非同期処理のタイムアウト処理を追加</li>
+            <li>画像をドラッグ＆ドロップで並び替えているが、スマホでは難しそう。</li>
+            <li>メール認証のURLは確実にワンタイムにしたい
+              <ul>
+                <li>URLの有効期限内（1時間）に、ユーザーが登録→退会→同じユーザー名とメールアドレスで再登録した場合。1回目のアカウントの登録時に送信されたURLで、2回目のアカウントの本人確認ができてしまう。</li>
+              </ul>
+            </li>
+            <li>ユーザーが永遠にメール認証のURLをクリックしない場合、手動でデータを削除する必要がある。自動にしたい。</li>
+            <li>アプリ内の設定機能を追加（登録情報の変更などができる）</li>
+            <li>全ての機能を完成させる（アイコン変更機能、パスワード再設定の機能、お問い合わせ）</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
