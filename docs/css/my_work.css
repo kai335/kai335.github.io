@@ -377,6 +377,10 @@ img.contain{
   border:1px #333 solid;
   padding: 4px 8px;
 }
+#references{
+  padding: calc(1rem + 4px);
+  box-sizing: border-box;
+}
 #tech-stack table{
   border-collapse: collapse;
   margin: 8px 0 8px 40px;
