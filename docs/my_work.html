@@ -22,18 +22,18 @@
     <main>
       <div class="all-contents">
         <h1>制作物</h1>
-        <p>webアプリ<a href="https://github.com/kai335/Moment">『Moment』</a>を制作しました（未デプロイのため、スクリーンショットで紹介させていただきます）。</p>
+        <p>webアプリ<a href="https://github.com/kai335/Moment">『Moment』</a>を制作しました（未デプロイのため、スクリーンショットを使用しています）。</p>
 
         <nav id="index">
           <h1>目次</h1>
           <ul>
-            <li><a href="#my-work-overview">『Moment』紹介</a></li>
-            <li><a href="#background">開発背景</a></li>
-            <li><a href="#all-functions">機能一覧（ユーザー目線）</a></li>
-            <li><a href="#implementation-details">実装詳細（開発者目線）</a></li>
-            <li><a href="#er-diagram">ER図</a></li>
-            <li><a href="#tech-stack">技術スタック</a></li>
-            <li><a href="#next-steps">今後の課題と追加したい機能</a></li>
+            <li class="dot"><a href="#my-work-overview">『Moment』紹介</a></li>
+            <li class="dot"><a href="#background">開発背景</a></li>
+            <li class="dot"><a href="#all-functions">機能一覧（ユーザー目線）</a></li>
+            <li class="dot"><a href="#implementation-details">実装詳細（開発者目線）</a></li>
+            <li class="dot"><a href="#er-diagram">ER図</a></li>
+            <li class="dot"><a href="#tech-stack">技術スタック</a></li>
+            <li class="dot"><a href="#next-steps">今後の課題と追加したい機能</a></li>
           </ul>
         </nav>
   
@@ -45,9 +45,9 @@
           <h2>【スマートフォンでの表示】</h2>
           <div class="middle-frame"><div><img src="./images/screenshot-232023.png" class="contain"></div></div>
           <ul>
-            <li>あなたのコレクションを楽しみましょう。カテゴリに分けて自由に鑑賞。</li>
-            <li>リアルやSNSで疲れを感じる人に。「自分が生きている目の前の世界」を見つめるきっかけに。</li>
-            <li>「自分だけの写真集を作る」という楽しみ方も。</li>
+            <li class="dot">あなたのコレクションを楽しみましょう。カテゴリに分けて自由に鑑賞。</li>
+            <li class="dot">リアルやSNSで疲れを感じる人に。「自分が生きている目の前の世界」を見つめるきっかけに。</li>
+            <li class="dot">「自分だけの写真集を作る」という楽しみ方も。</li>
           </ul>
         </section>
 
@@ -60,8 +60,8 @@
           </details>
           <h2>写真を眺めてメンタルヘルスの改善？</h2>
           <ul>
-            <li>写真が持つ色や雰囲気に浸ったり、美しいと感じることで、思考することから離れたり、感情に変化をもたらします。</li>
-            <li>写真を撮って見返す行為は、自然と「自分が生きている目の前の世界」の美しさを見つめることになり、SNSが生み出す生きづらい世の中と距離をおくことに繋げます。</li>
+            <li class="dot">写真が持つ色や雰囲気に浸ったり、美しいと感じることで、思考することから離れたり、感情に変化をもたらします。</li>
+            <li class="dot">写真を撮って見返す行為は、自然と「自分が生きている目の前の世界」の美しさを見つめることになり、SNSが生み出す生きづらい世の中と距離をおくことに繋げます。</li>
           </ul>
           <p>そのため、ユーザーには写真鑑賞を楽しみ、「素敵だと感じるものを、じっくり味わってほしい」と考えています。</p>
           <h2>【こだわり①】 --- 世界観</h2>
@@ -80,7 +80,7 @@
           <nav id="all-functions-index">
             <h1>目次</h1>
             <ul>
-              <li>
+              <li class="dot">
                 <a href="#main-functions">メイン機能</a>
                 <ul class="main-functions-index">
                   <li><a href="#add-post">追加</a></li>
@@ -88,14 +88,14 @@
                   <li><a href="#delete">削除</a></li>
                 </ul>
               </li>
-              <li>
+              <li class="dot">
                 <a href="#top-page">トップページの機能</a>
                 <ul>
                   <li><a href="#new-registration">新規登録</a></li>
                   <li><a href="#login">ログイン</a></li>
                 </ul>
               </li>
-              <li><a href="#logout-and-delete-account">ログアウト / アカウント削除</a></li>
+              <li class="dot"><a href="#logout-and-delete-account">ログアウト / アカウント削除</a></li>
             </ul>
           </nav>
   
@@ -106,11 +106,11 @@
               <div class="steps">
                 <p class="step-1">①ここで投稿を行います。1度に投稿できる画像は1～4枚です。画像を選択するとプレビューされます。</p>
                 <div class="small-frame step-1-img-1"><div><img src="./images/screenshot-130417-1.png" class="contain"></div></div>
-                <div class="small-frame step-1-img-2"><div><img src="./images/screenshot-115112.jpg"></div></div>
+                <div class="small-frame step-1-img-2"><div><img src="./images/screenshot-115112.jpg" class="cover"></div></div>
                 <p class="step-2">②ドラッグ＆ドロップで好きな順に並び替え、投稿。</p>
-                <div class="small-frame step-2-img"><div><img src="./images/screenshot-131638-1.jpg"></div></div>
+                <div class="small-frame step-2-img"><div><img src="./images/screenshot-131638-1.jpg" class="cover"></div></div>
                 <p class="step-3">③投稿できました。</p>
-                <div class="small-frame step-3-img"><div><img src="./images/screenshot-154542-1.jpg"></div></div>
+                <div class="small-frame step-3-img"><div><img src="./images/screenshot-154542-1.jpg" class="cover"></div></div>
               </div>
             </section>
   
@@ -121,11 +121,11 @@
                 <div class="small-frame step-1-img-1"><div><img src="./images/screenshot-102317-1.png" class="contain"></div></div>
                 <div class="small-frame step-1-img-2"><div><img src="./images/screenshot-203241.jpg" class="contain"></div></div>
                 <p class="step-2">②既存のカテゴリに追加するか、新しいカテゴリを作って追加します。新しく『スイーツ』というカテゴリを作成しました。</p>
-                <div class="small-frame step-2-img-1"><div><img src="./images/screenshot-163521.jpg"></div></div>
-                <div class="small-frame step-2-img-2"><div><img src="./images/screenshot-165025-1.jpg"></div></div>
+                <div class="small-frame step-2-img-1"><div><img src="./images/screenshot-163521.jpg" class="cover"></div></div>
+                <div class="small-frame step-2-img-2"><div><img src="./images/screenshot-165025-1.jpg" class="cover"></div></div>
                 <p class="step-3">③ここで不要なカテゴリを削除できます。</p>
                 <div class="small-frame step-3-img-1"><div><img src="./images/screenshot-102317-2.png" class="contain"></div></div>
-                <div class="small-frame step-3-img-2"><div><img src="./images/screenshot-164822.jpg"></div></div>
+                <div class="small-frame step-3-img-2"><div><img src="./images/screenshot-164822.jpg" class="cover"></div></div>
               </div>
             </section>
             
@@ -133,7 +133,7 @@
               <h1>削除</h1>
               <div class="steps">
               <p class="step-1">ここで投稿を削除したり、投稿をカテゴリから外すことができます。</p>
-              <div class="small-frame step-1-img"><div><img src="./images/screenshot-202937-1.png"></div></div>
+              <div class="small-frame step-1-img"><div><img src="./images/screenshot-202937-1.png" class="cover"></div></div>
             </section>
           </section>
   
@@ -167,7 +167,7 @@
             <section id="login">
               <h1>ログイン</h1>
               <ul>
-                <li>本登録済みのユーザーのみが利用できます。仮登録中の場合、本登録を促すメッセージと、メール再送信の案内を表示します。</li>
+                <li class="dot">本登録済みのユーザーのみが利用できます。仮登録中の場合、本登録を促すメッセージと、メール再送信の案内を表示します。</li>
               </ul>
             </section>
             
@@ -177,8 +177,8 @@
             <h1>ログアウト / アカウント削除</h1>
             <div class="logout-and-delete-account-img">
               <ul>
-                <li>ログアウト : クリックするとトップページへ戻ります。</li>
-                <li>アカウント削除 : パスワードを入力し、確認画面にて確定します。</li>
+                <li class="dot">ログアウト : クリックするとトップページへ戻ります。</li>
+                <li class="dot">アカウント削除 : パスワードを入力し、確認画面にて確定します。</li>
               </ul>
               <div class="small-frame"><div><img src="./images/screenshot-233818-3.png" class="contain"></div></div>
             </div>
@@ -190,8 +190,8 @@
           <h1>実装詳細（開発者目線）</h1>
           <p><span class="highlight">※下線は工夫した所です。</span></p>
           <ul>
-            <li class="level-1">POST送信での二重送信を防止。ブラウザの戻るボタンが使える入力フォームを実装</li>
-            <li class="level-1">入力値のバリデーション
+            <li class="star">POST送信での二重送信を防止。ブラウザの戻るボタンが使える入力フォームを実装</li>
+            <li class="star">入力値のバリデーション
               <ul>
                 <li>JavaScript : ユーザー体験 & 不適切な値を弾きサーバーの負荷を減らす</li>
                 <li>PHP : 全てのチェック。JavaScriptが無効なユーザーにも対応</li>
@@ -241,8 +241,8 @@
                 </tbody>
               </table>
             </li>
-            <li class="level-1">パスワードをBcryptでハッシュ化してDBに格納</li>
-            <li class="level-1">
+            <li class="star">パスワードをBcryptでハッシュ化してDBに格納</li>
+            <li class="star">
               ユーザーの投稿の表示
               <ul>
                 <li>画像は、ビューポートが変わっても常にアスペクト比を保つ</li>
@@ -251,7 +251,7 @@
                 <li><span class="highlight">現在のカテゴリが、全投稿を取得するまで、他のカテゴリは選択できない（瞬時に他のカテゴリを選択すると、投稿が前回のカテゴリのままになる問題を解決）</span></li>
               </ul>
             </li>
-            <li class="level-1">
+            <li class="star">
               新規登録
               <ul>
                 <li>複数ページある入力フォームの実装</li>
@@ -266,28 +266,28 @@
                 <li><span class="font-color-red">（※1）</span>メール認証のURL</li>
               </ul>
             </li>
-            <li class="level-1">追加
+            <li class="star">追加
               <ul>
                 <li><span class="highlight">1投稿につき画像は1～4枚。画像をドラッグ＆ドロップして好きな順で投稿できる</span></li>
               </ul>
             </li>
-            <li class="level-1">カテゴリ > カテゴリ作成・投稿追加
+            <li class="star">カテゴリ > カテゴリ作成・投稿追加
               <ul>
-                <li>カテゴリに分けたい投稿を選択し、既存のカテゴリか、新しいカテゴリを作って追加する。カテゴリの中身は空にならない。1つの投稿は複数のカテゴリに属することができ、1つのカテゴリは複数の投稿を持つ</li>
+                <li>投稿は、既存のカテゴリか、新しいカテゴリを作って追加する。カテゴリの中身は空にならない。1つの投稿は複数のカテゴリに属することができ、1つのカテゴリは複数の投稿を持つ</li>
               </ul>
             </li>
-            <li class="level-1">削除
+            <li class="star">削除
               <ul>
-                <li>投稿を削除したり、投稿をカテゴリから外す。この時、カテゴリの中身が空になれば、そのカテゴリは自動で削除される</li>
+                <li>投稿を削除する、投稿をカテゴリから外す。この時、カテゴリの中身が空になれば、そのカテゴリは自動で削除される</li>
               </ul>
             </li>
-            <li class="level-1">
+            <li class="star">
               ログイン
               <ul>
                 <li>セッションにユーザー名を格納した状態のこと</li>
               </ul>
             </li>
-            <li class="level-1">
+            <li class="star">
               ログアウト
               <ul>
                 <li>
@@ -362,25 +362,25 @@
         <section id="next-steps">
           <h1>今後の課題と追加したい機能</h1>
           <ul>
-            <li>ユーザーが画像を投稿する時、自動でメタデータの削除と圧縮を行いたい</li>
-            <li>最近のスマートフォンの画像（HEICファイル）への対応</li>
-            <li>画像は非公開ディレクトリに保存し、DBにはパスを格納する方法にしたい。現在、DBには画像データそのものを格納し、データURLとして表示している</li>
-            <li>投稿を表示する非同期処理のパフォーマンスを見直す</li>
-            <li>投稿を表示する非同期処理のタイムアウト処理を追加
+            <li class="dot">ユーザーが画像を投稿する時、自動でメタデータの削除と圧縮を行いたい</li>
+            <li class="dot">最近のスマートフォンの画像（HEICファイル）への対応</li>
+            <li class="dot">画像は非公開ディレクトリに保存し、DBにはパスを格納する方法にしたい。現在、DBには画像データそのものを格納し、データURLとして表示している</li>
+            <li class="dot">投稿を表示する非同期処理のパフォーマンスを見直す</li>
+            <li class="dot">投稿を表示する非同期処理のタイムアウト処理を追加
               <ul>
                 <li>現在の実装では、一度で全ての投稿を取得している。これだとユーザーの投稿数が増えるにつれて、取得にかかる時間も増えるので、タイムアウトまでの時間が設定できない。画面上では、スクロールするたびに少しずつ投稿を読み込んで表示しているように見えるので、ブラウザのレンダリング（見た目）と、実装とのギャップを実感。一定の数ずつ投稿を取得するよう修正する</li>
               </ul>
             </li>
-            <li>画像をドラッグ＆ドロップで並び替えているが、スマホでは難しそう</li>
-            <li>メール認証のURLは確実にワンタイムにしたい
+            <li class="dot">画像をドラッグ＆ドロップで並び替えているが、スマホでは難しそう</li>
+            <li class="dot">メール認証のURLは確実にワンタイムにしたい
               <ul>
                 <li>メール再送ボタンをクリックして、複数のメールが来た時、どのURLでも本人確認できてしまう</li>
                 <li>URLの有効期限内（1時間）に、ユーザーが登録→退会→同じユーザー名とメールアドレスで再登録した場合。1回目のアカウントの登録時に送信されたURLで、2回目のアカウントの本人確認ができてしまう</li>
               </ul>
             </li>
-            <li>ユーザーが永遠に仮登録状態の時（メール認証のURLをクリックしない）、手動でデータを削除する必要がある。自動にしたい</li>
-            <li>FastCGI版でデプロイする</li>
-            <li>全ての機能を完成させる。パスワード再設定、お問い合わせ、プライバシーポリシー、利用規約本文、アプリ内の設定画面（登録情報の変更など）、アイコン変更</li>
+            <li class="dot">ユーザーが永遠に仮登録状態の時（メール認証のURLをクリックしない）、手動でデータを削除する必要がある。自動にしたい</li>
+            <li class="dot">FastCGI版でデプロイする</li>
+            <li class="dot">全ての機能を完成させる。パスワード再設定、お問い合わせ、プライバシーポリシー、利用規約本文、アプリ内の設定画面（登録情報の変更など）、アイコン変更</li>
           </ul>
         </section>
       </div>
