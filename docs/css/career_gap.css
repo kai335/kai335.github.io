@@ -1,0 +1,72 @@
+.wrapper{
+  margin: 0 auto;
+  max-width: 35rem;
+}
+.back-page::before {
+  content: "◀";
+  font-size: 1rem;
+  margin-right: 0.2em;
+}
+.back-page{
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px;
+  background-color: white;
+}
+.index ul{
+  margin: 0;
+  padding: 0;
+}
+.index ul li{
+  list-style-type: none;
+  padding-left: 1rem;
+  /* padding-left: calc(1rem + 4px); */
+  position: relative;
+}
+.index ul li::before{
+  /* content: "・";
+  position: absolute;
+  left: 0;
+  color: black; */
+  
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(((1rem * 1.6) / 2) - (0.5rem / 2));
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: black;
+}
+h1{
+  display: inline-block;
+}
+h1::after{
+	content: '';
+	display: block;
+	width: 85px;
+	height: 5px;
+	background: #000;
+	margin-top: 24px;
+}
+h2{
+  scroll-margin-top: calc((1rem * 1.6) + 32px);/* headerのheight以上とする */
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+}
+.highlight{
+  font-weight: bolder;
+}
+@media (max-width: 480px){
+  h2{
+    scroll-margin-top: 0;
+  }
+}
+@media (any-hover: hover){
+  .back-page:hover{
+    filter: brightness(0.7) contrast(1.6);
+  }
+}
