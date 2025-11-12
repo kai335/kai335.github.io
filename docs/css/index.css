@@ -67,9 +67,21 @@ img{
 }
 .profile ul{
   margin: 0;
+  padding: 0;
+}
+.profile ul li{
+  list-style-type: none;
+  padding-left: calc(1rem + 4px);
+  position: relative;
+}
+.profile ul li::before{
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: black;
 }
 .message{
-  text-align: center;
+  margin: 40px 0;
 }
 /* @media (min-width: 769px) and (max-width: 1024px){
 
