@@ -2,11 +2,39 @@
   font-size: 1.5em;
   margin: 2rem 0;
 } */
-ul{
-  margin: 0;
-}
 .my-skill{
   border-collapse: collapse;
+}
+.my-skill ul{
+  padding: 0;
+  margin: 0;
+}
+.my-skill ul li{
+  list-style-type: none;
+  padding-left: calc(1rem + 4px);
+  position: relative;
+}
+.my-skill ul li::before{
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: black;
+}
+/* .dot */
+.my-skill ul li.dot{
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+.my-skill ul li.dot::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(((1rem * 1.6) / 2) - (0.5rem / 2));
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: black;
 }
 .my-skill th, .my-skill td{
   border:1px #333 solid;
