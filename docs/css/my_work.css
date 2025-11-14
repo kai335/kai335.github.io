@@ -42,15 +42,12 @@ img{
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
-img.contain{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.contain{
   object-fit: contain;
+}
+.cover{
+  object-fit: cover;
 }
 /* 重要な部分の文字色 */
 /*
@@ -64,7 +61,6 @@ img.contain{
 .highlight{
   background-color: #fdb;
 }
-/* my_work.htmlのスタイル */
 .go-to-index{
   position: fixed;
   width: 10%;
@@ -99,8 +95,57 @@ img.contain{
   /* ------------------ */
   margin-right: 4px;
 }
+/* <li>のlist-type-styleを指定。共通のスタイルを、class属性（.dotと.star）で上書き */
+/* 共通のスタイル */
+.all-contents ul{
+  margin: 0;
+  padding: 0;
+}
+.all-contents ul li{
+  list-style-type: none;
+  padding-left: calc(1rem + 4px);
+  position: relative;
+}
+.all-contents ul li::before{
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: black;
+}
+/* .dot */
+.all-contents ul li.dot{
+  padding-left: 1rem;
+}
+.all-contents ul li.dot::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(((1rem * 1.6) / 2) - (0.5rem / 2));
+  display: inline-block;
+  /* font-size: 16px;なので、8px × 8px */
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: black;
+}
+/* .star */
+.all-contents ul li.star::before{
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: gold;
+}
 #index a{
   text-decoration: none;
+}
+#my-work-overview, #background, #implementation-details, #all-functions, #er-diagram, #tech-stack, #next-steps{
+  scroll-margin-top: calc((1rem * 1.6) + 32px);
+}
+#main-functions, #top-page, #logout-and-delete-account{
+  scroll-margin-top: calc((1rem * 1.6) + 32px);
+}
+#add-post, #category, #delete, #new-registration, #login{
+  scroll-margin-top: calc((1rem * 1.6) + 32px);
 }
 #my-work-overview h2{
   margin: 0;
@@ -109,6 +154,7 @@ img.contain{
 /* 一番大きなh1のスタイル */
 #index > h1, #my-work-overview > h1, #all-functions > h1, #implementation-details > h1, #background > h1, #er-diagram > h1, #tech-stack > h1, #next-steps > h1{
   display: inline-block;
+  margin: 32px 0;
 }
 #index > h1::after, #my-work-overview > h1::after, #all-functions > h1::after, #implementation-details > h1::after, #background > h1::after, #er-diagram > h1::after, #tech-stack > h1::after, #next-steps > h1::after{
 	content: '';
@@ -346,26 +392,6 @@ img.contain{
 .logout-and-delete-account-img > div{
   grid-area: div;
 }
-#implementation-details ul{
-  padding: 0;
-}
-#implementation-details li{
-  list-style-type: none;
-  padding-left: calc(1rem + 4px);
-  position: relative;
-}
-#implementation-details li.level-1::before{
-  content: "★";
-  position: absolute;
-  left: 0;
-  color: gold;
-}
-#implementation-details li:not(.level-1)::before{
-  content: "・";
-  position: absolute;
-  left: 0;
-  color: black;
-}
 .validation-lists{
   border-collapse: collapse;
   margin: 8px 0 8px calc(1rem + 4px);
@@ -397,10 +423,18 @@ img.contain{
 }
 @media (min-width: 481px) and (max-width: 768px){
 
-}
-@media (max-width: 480px){
-
 } */
+@media (max-width: 480px){
+  #my-work-overview, #background, #implementation-details, #all-functions, #er-diagram, #tech-stack, #next-steps{
+    scroll-margin-top: 0;
+  }
+  #main-functions, #top-page, #logout-and-delete-account{
+    scroll-margin-top: 0;
+  }
+  #add-post, #category, #delete, #new-registration, #login{
+    scroll-margin-top: 0;
+  }
+}
 @media (any-hover: hover){
   .go-to-index a:hover{
     filter: brightness(0.7) contrast(1.6);
