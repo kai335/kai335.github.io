@@ -60,7 +60,7 @@ h2{
   scroll-margin-top: calc((1rem * 1.6) + 32px);/* headerのheight以上とする */
   display: inline-block;
 }
-h4{
+h3{
   font-size: 1rem;
   margin: 0;
   display: inline-block;
